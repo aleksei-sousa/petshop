@@ -1,0 +1,9 @@
+.preview_pet_images{
+    display: flex;
+    margin: 1em 0;
+}
+.preview_pet_images img {
+    width: 100px;
+    height: 100px;
+    margin-left: 13px;
+}

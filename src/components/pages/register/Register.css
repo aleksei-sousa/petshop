@@ -1,0 +1,52 @@
+.form_control{
+    max-width: 300px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form_content{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+    align-items: center;
+}
+.label{
+    font-weight: bold;
+}
+.input_login{
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border-color: #777;
+    border: 1px solid #777;
+}
+input[type="submit"]{
+    width: 100%;
+    background-color: rgb(47, 201, 27);
+    border: 0px;
+    padding: 15px;
+    border-radius: 14px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .4s;
+    margin-top: 30px;
+}
+input[type="submit"]:hover{
+    background-color: rgb(32, 156, 16);
+
+}
+p{
+    margin-top: 15px;
+}
+p a {
+    color: rgb(11, 73, 245);
+    font-weight: bold;
+}

@@ -1,0 +1,47 @@
+Front end
+
+Formulário:
+    dentro do form há um componente input que é reutilizado recebendo props diferentes para, email, phone, password, etc, as props são: text, name, type, placeholder e handleOnChange, este último para selecinoar o objeto com os inputs e seus valores.
+
+    na tahe form o onSubmit={handleSubmit} chamando a função handleSubmit com preventDefault
+
+UseContext
+    Nesse hook, precisamos criar o contexto e o provedor(provider), o provider vai envolver os componentes onde nosso contexto será usado
+
+    em UseContext:
+      importar createContext from react,
+
+      instanciar
+        export const ThemContext = createContext();
+
+      Provider:
+        function userProvider ({ children }) {
+            const { register } = useAuth()
+            return <Context.Provider value={{ register }}>{ children }</Context.Provider>
+        }
+
+    Em provider, definimos o value, que serão os dados que serão compartilhados no contexte
+
+
+importar context from react, instanciar, exportar
+
+  import { createaContext } from 'react'
+  const UserContext = createaContext({})
+  desse 'UserContext' vai sair o 'Provider' com userContext.Provider
+  export default UserContext
+
+em app.js:
+importar, abraçar com o provider e adidionar o value, esse value vai jogar pra dentro do contexto:
+  const UserContext = createaContext({value})
+
+  import UserContext from './context/userContext'
+
+  <UserContext value ={{ name: "aleksei"}}>
+    <componente1/>
+    <componente2/>
+  <UserContext/>
+
+no componente filho:
+importar o hook useContext, e o UserContext, sendo que o hook vai utilizar o contexto que criamos
+
+  const { name } = useContext(UserContext)
