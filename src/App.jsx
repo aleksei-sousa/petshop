@@ -17,7 +17,7 @@ import {
 //layouts
 import Navbar from './components/layout/navbar/Navbar'
 import Footer from './components/layout/footer/Footer'
-import Message from './components/layout/message/message';
+import Message from './components/layout/message/Message';
 
 //pages
 import Home from      './components/pages/home/Home';
